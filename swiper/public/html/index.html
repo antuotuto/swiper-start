@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi">
+  <meta http-equiv="cleartype" content="on">
+  <meta name="description" content="月饼节">
+  <title>太古</title>
+  <link href="../styles/style.css" rel="stylesheet" type="text/css">
+  <link href="../styles/animate.css" rel="stylesheet" type="text/css">
+  <link href="../styles/delay.css" rel="stylesheet" type="text/css">
+  <link href="../styles/swiper.css" rel="stylesheet" type="text/css">
+  <script src="../scripts/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <ul class="item" id="item">
+    <li class="item-li">
+      <div class="box">
+        <h1>喜欢你1</h1>
+        <p>我叫王安1</p>
+      </div>
+    </li>
+    <li class="item-li">
+      <div class="box">
+        <h1>喜欢你2</h1>
+        <p>我叫王安2</p>
+      </div>
+    </li>
+    <li class="item-li">
+      <div class="box">
+        <h1>喜欢你3</h1>
+        <p>我叫王安3</p>
+      </div>
+    </li>
+    <li class="item-li">
+      <div class="box">
+        <h1>喜欢你4</h1>
+        <p>我叫王安4</p>
+      </div>
+    </li>
+  </ul>
+
+  <script>
+    $(function () {
+      $('.item .item-li').hover(function (e) {
+        $(this).addClass('active');
+
+        var index = $('.item .item-li').index($(this))
+        $(this).parents('.item').addClass('item' + index);
+      }, function (e) {
+        $(this).removeClass('active');
+        var index = $('.item .item-li').index($(this))
+        
+        $(this).parents('.item').removeClass('item' + index);
+      })
+    })
+  </script>
+
+  <script src="../scripts/swiper.js"></script>
+  <script src="../scripts/default.js"></script>
+</body>
+
+</html>
